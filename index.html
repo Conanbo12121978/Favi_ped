@@ -2,7 +2,7 @@
 <html lang="th">
 <head>
     <meta charset="UTF-8">
-    <title>คำนวณขนาดยา Favipiravir</title>
+    <title>คำนวณขนาดยา Favipiravir ในเด็ก</title>
     <style>
         body { font-family: sans-serif; text-align: center; margin-top: 50px; }
         select, p { font-size: 1.2em; }
@@ -13,9 +13,9 @@
     <label for="weightSelect">น้ำหนัก (kg): </label>
     <select id="weightSelect">
         <option value="">-- เลือกน้ำหนัก --</option>
-        <option value="30">30 kg</option>
-        <option value="35">35 kg</option>
-        <option value="40">40 kg</option>
+        <option value="3">3 kg</option>
+        <option value="4">4 kg</option>
+        <option value="5">5 kg</option>
         <option value="45">45 kg</option>
         <option value="50">50 kg</option>
         <option value="55">55 kg</option>
@@ -30,7 +30,7 @@
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const doseMap = {
-                30: "วันแรก 1600 mg (8 เม็ด), วันถัดไป 600 mg (3 เม็ด)",
+                3: "วันแรก 105 mg (0.5 เม็ด), วันถัดไป 45 mg (0.25 เม็ด) total 5 เม็ด",
                 35: "วันแรก 1600 mg (8 เม็ด), วันถัดไป 600 mg (3 เม็ด)",
                 40: "วันแรก 1600 mg (8 เม็ด), วันถัดไป 600 mg (3 เม็ด)",
                 45: "วันแรก 1800 mg (9 เม็ด), วันถัดไป 800 mg (4 เม็ด)",
