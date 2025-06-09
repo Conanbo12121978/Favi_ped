@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>คำนวณขนาดยา Favipiravir</title>
+    <style>
+        body { font-family: sans-serif; text-align: center; margin-top: 50px; }
+        select, p { font-size: 1.2em; }
+    </style>
+</head>
+<body>
+    <h1>เลือกน้ำหนักเพื่อดูขนาดยา Favipiravir</h1>
+    <label for="weightSelect">น้ำหนัก (kg): </label>
+    <select id="weightSelect">
+        <option value="">-- เลือกน้ำหนัก --</option>
+        <option value="30">30 kg</option>
+        <option value="35">35 kg</option>
+        <option value="40">40 kg</option>
+        <option value="45">45 kg</option>
+        <option value="50">50 kg</option>
+        <option value="55">55 kg</option>
+        <option value="60">60 kg</option>
+        <option value="65">65 kg</option>
+        <option value="70">70 kg</option>
+        <option value="75">75 kg</option>
+    </select>
+
+    <p id="doseResult"></p>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const doseMap = {
+                30: "วันแรก 1600 mg (8 เม็ด), วันถัดไป 600 mg (3 เม็ด)",
+                35: "วันแรก 1600 mg (8 เม็ด), วันถัดไป 600 mg (3 เม็ด)",
+                40: "วันแรก 1600 mg (8 เม็ด), วันถัดไป 600 mg (3 เม็ด)",
+                45: "วันแรก 1800 mg (9 เม็ด), วันถัดไป 800 mg (4 เม็ด)",
+                50: "วันแรก 1800 mg (9 เม็ด), วันถัดไป 800 mg (4 เม็ด)",
+                55: "วันแรก 2000 mg (10 เม็ด), วันถัดไป 1000 mg (5 เม็ด)",
+                60: "วันแรก 2200 mg (11 เม็ด), วันถัดไป 1200 mg (6 เม็ด)",
+                65: "วันแรก 2400 mg (12 เม็ด), วันถัดไป 1400 mg (7 เม็ด)",
+                70: "วันแรก 2600 mg (13 เม็ด), วันถัดไป 1600 mg (8 เม็ด)",
+                75: "วันแรก 2800 mg (14 เม็ด), วันถัดไป 1800 mg (9 เม็ด)"
+            };
+
+            const weightSelect = document.getElementById("weightSelect");
+            const result = document.getElementById("doseResult");
+
+            weightSelect.addEventListener("change", function () {
+                const weight = weightSelect.value;
+                if (weight && doseMap[weight]) {
+                    result.textContent = "ขนาดยา: " + doseMap[weight];
+                } else {
+                    result.textContent = "";
+                }
+            });
+        });
+    </script>
+</body>
+</html>
