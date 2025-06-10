@@ -5,12 +5,12 @@
     <title>คำนวณขนาดยา Favipiravir ในเด็ก</title>
     <style>
         body { font-family: sans-serif; text-align: left; margin-top: 50px; }
-        select, p { font-size: 4.2em; }
+        select, p { font-size: 3.2em; }
     </style>
 </head>
 <body>
-    <h1>เลือกน้ำหนักเพื่อดูขนาดยา Favipiravir</h1>
-    <label for="weightSelect">น้ำหนัก (kg): </label>
+    <h1>   เลือกน้ำหนักเพื่อดูขนาดยา Favipiravir</h1>
+    <label for="weightSelect">    น้ำหนัก (kg): </label>
     <select id="weightSelect">
         <option value="">-- เลือกน้ำหนัก --</option>
         <option value="3">3 kg</option>
@@ -59,8 +59,8 @@
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const doseMap = {
-3   :"📅 วันแรก; 105 mg  (0.5 เม็ด) x 2<br> ➡️ day2-5;  45 mg (0.25 เม็ด) x 2 <br>💊 total 5 เม็ด",
-4	:"📅 วันแรก; 140 mg (0.75 เม็ด) x 2<br> ➡️ day2-5;  60 mg (0.25 เม็ด) x 2 <br>💊 total 6 เม็ด",
+3   :" 📅 วันแรก; 105 mg  (0.5 เม็ด) x 2<br> ➡️ day2-5;  45 mg (0.25 เม็ด) x 2 <br> 💊 total 5 เม็ด",
+4	:" 📅 วันแรก; 140 mg (0.75 เม็ด) x 2<br> ➡️ day2-5;  60 mg (0.25 เม็ด) x 2 <br> 💊 total 6 เม็ด",
 5	:"วันแรก  (70 MKDay) 175	mg  (1 เม็ด) x 2 <br>day2-5 (30 MKDay) 	75	mg	 (0.5 เม็ด) x 2 <br>total 	6	 เม็ด",
 6	:"วันแรก  (70 MKDay) 210	mg  (1 เม็ด) x 2 <br>day2-5 (30 MKDay) 	90	mg	 (0.5 เม็ด) x 2 <br>total 	6	 เม็ด",
 7	:"วันแรก  (70 MKDay) 245	mg  (1.25 เม็ด) x 2 <br>day2-5 (30 MKDay) 	105	mg	 (0.5 เม็ด) x 2 <br>total 	7	 เม็ด",
@@ -105,7 +105,7 @@
             weightSelect.addEventListener("change", function () {
                 const weight = weightSelect.value;
                 if (weight && doseMap[weight]) {
-                    result.innerHTML = "ขนาดยา:<br> วันแรก 70 MKDay วันถัดมา 30 MKDay<br> จำนวนเม็ดปัดขึ้นลงแล้ว ยา 200 mg/เม็ด" + `<pre>${doseMap[weight]}</pre>`;
+                    result.innerHTML = "  ขนาดยา:<br> วันแรก 70 MKDay วันถัดมา 30 MKDay<br> จำนวนเม็ดปัดขึ้นลงแล้ว ยา 200 mg/เม็ด" + `<pre>${doseMap[weight]}</pre>`;
                 } else {
                      result.innerHTML = "";
                 }
