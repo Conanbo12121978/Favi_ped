@@ -105,9 +105,9 @@
             weightSelect.addEventListener("change", function () {
                 const weight = weightSelect.value;
                 if (weight && doseMap[weight]) {
-                    result.textContent = "ขนาดยา: " + doseMap[weight];
+                    result.innerHTML = "ขนาดยา: " + doseMap[weight];
                 } else {
-                    result.textContent = "";
+                    result.innerHTML = "";
                 }
             });
         });
