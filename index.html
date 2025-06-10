@@ -105,7 +105,7 @@
             weightSelect.addEventListener("change", function () {
                 const weight = weightSelect.value;
                 if (weight && doseMap[weight]) {
-                    result.innerHTML = "ขนาดยา:<br>" + doseMap[weight];
+                    result.innerHTML = "ขนาดยา:<br>" + `<pre>${doseMap[weight]}</pre>`;
                 } else {
                      result.innerHTML = "";
                 }
