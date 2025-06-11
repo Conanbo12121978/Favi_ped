@@ -105,7 +105,7 @@
             weightSelect.addEventListener("change", function () {
                 const weight = weightSelect.value;
                 if (weight && doseMap[weight]) {
-                    result.innerHTML = "  ขนาดยา:<br> วันแรก 70 MKDay วันถัดมา 30 MKDay<br> จำนวนเม็ดปัดขึ้นลงแล้ว ref.ฝ่ายเภสัชกรรม รพ.ศิริราช และภาควิชากุมารเวชศาสตร์ คณะแพทย์ศาสตร์ศิริราชพยาบาล 15/1/65" + `<pre>${doseMap[weight]}</pre>`;
+                    result.innerHTML = "  ขนาดยา:<br> วันแรก 70 MKDay วันถัดมา 30 MKDay<br> จำนวนเม็ดปัดขึ้นลงแล้ว <br>ref.ฝ่ายเภสัชกรรม รพ.ศิริราช และภาควิชากุมารเวชศาสตร์ คณะแพทย์ศาสตร์ศิริราชพยาบาล 15/1/65" + `<pre>${doseMap[weight]}</pre>`;
                 } else {
                      result.innerHTML = "";
                 }
