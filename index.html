@@ -9,7 +9,7 @@
     </style>
 </head>
 <body>
-    <h1>   เลือกน้ำหนักเพื่อดูขนาดยา Favipiravir</h1>
+    <h1>   เลือกน้ำหนักเพื่อดูขนาดยา Favipiravir -cap (200 mg)</h1>
     <label for="weightSelect">    น้ำหนัก (kg): </label>
     <select id="weightSelect">
         <option value="">-- เลือกน้ำหนัก --</option>
@@ -105,7 +105,7 @@
             weightSelect.addEventListener("change", function () {
                 const weight = weightSelect.value;
                 if (weight && doseMap[weight]) {
-                    result.innerHTML = "  ขนาดยา:<br> วันแรก 70 MKDay วันถัดมา 30 MKDay<br> จำนวนเม็ดปัดขึ้นลงแล้ว ยา 200 mg/เม็ด" + `<pre>${doseMap[weight]}</pre>`;
+                    result.innerHTML = "  ขนาดยา:<br> วันแรก 70 MKDay วันถัดมา 30 MKDay<br> จำนวนเม็ดปัดขึ้นลงแล้ว ref.ฝ่ายเภสัชกรรม รพ.ศิริราช และภาควิชากุมารเวชศาสตร์ คณะแพทย์ศาสตร์ศิริราชพยาบาล 15/1/65" + `<pre>${doseMap[weight]}</pre>`;
                 } else {
                      result.innerHTML = "";
                 }
